@@ -29,11 +29,8 @@ namespace Task1
             }
         }
 
-        public int SumSequentially(int matrixSize)
+        public void SumSequentially(int matrixSize)
         {
-            var watch = new Stopwatch();
-            watch.Start();
-            
             for (var i = 0; i < matrixSize; i++)
             {
                 for(var j = 0; j < matrixSize; j++)
@@ -41,9 +38,6 @@ namespace Task1
                     _result[i, j] = StrongFunction(_firstMatrix[i, j] + _secondMatrix[i, j]);
                 }
             }
-            
-            watch.Stop();
-            return (int)watch.ElapsedMilliseconds;
         }
 
         public int[] SumParallel(int threadsCount, int matrixSize)
