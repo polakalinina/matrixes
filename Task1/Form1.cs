@@ -63,7 +63,7 @@ namespace Task1
             graphic.DrawLine(blackPen, new Point(-100, 0), new Point(1000, 0));//ось X
             graphic.DrawLine(blackPen, new Point(0, -1000), new Point(0, 100));//ось Y
 
-            var k = (double)pictureBox1.Height / max; //коэффициент маштабирования
+            var k = (double)pictureBox1.Height / max;
             for (var i = 0; i < 8; i++)
             {
                 points[i] = new PointF(i * 100, -float.Parse((times[i] * k).ToString()));
